@@ -1,5 +1,33 @@
+// Bug 1: Incorrect variable declaration
+var x = 5;
+var y = 10;
+var z = x + y;
+console.log("Bug 1 Result:", z);
 
-hgjhgj
-h
+// Bug 2: Function call with wrong argument order
+function greet(name, greeting) {
+    console.log(greeting + ", " + name + "!");
+}
 
-sdfsdf
+var name = "Alice";
+var greeting = "Hello";
+greet(greeting, name); // Correct order: greet(name, greeting)
+
+// Bug 3: Uncaught ReferenceError
+console.log("Bug 3 Result:", undefinedVariable);
+
+// Bug 4: Incorrect comparison operator
+var a = 10;
+var b = "10";
+if (a == b) { // Should be === for strict comparison
+    console.log("Bug 4 Result: Equal");
+} else {
+    console.log("Bug 4 Result: Not Equal");
+}
+
+// Bug 5: Infinite loop
+var i = 0;
+while (i < 5) { // Should be i <= 5 to prevent infinite loop
+    console.log("Bug 5 Result:", i);
+    i++;
+}
